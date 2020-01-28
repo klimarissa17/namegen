@@ -13,10 +13,7 @@ vowels = ['a', 'e', 'o', 'u', 'i']
 cons = [i for i in alphabet if i not in vowels]
 
 def gen_syllable(number = 3, is_open = True):
-    res = []
-    for i in range(number - 1):
-        letter = random.choice(cons) 
-        res.append(letter)
+    res = random.choices(cons, k=number-1)
     vowel = random.choice(vowels)
     if is_open: 
         pos = number - 1
